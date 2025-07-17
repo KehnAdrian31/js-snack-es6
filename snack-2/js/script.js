@@ -13,3 +13,21 @@ for (let i = 0; i < squadreCalcio.length; i++) {
     squadreCalcio[i].puntiFatti = Math.floor(Math.random() * 81);       // da 0 a 80
     squadreCalcio[i].falliSubiti = Math.floor(Math.random() * 81);     // da 0 a 80
 }
+
+// array vuoto dove mettere i nuovi oggetti
+const nuovoArray = []; 
+
+for (let i = 0; i < squadreCalcio.length; i++) {
+  const squadra = squadreCalcio[i];  
+
+  // creo un nuovo oggetto con solo nome e falliSubiti
+  const obj = {
+    nome: squadra.nome,
+    falliSubiti: squadra.falliSubiti
+  };
+
+  // aggiungo l'oggetto al nuovo array
+  nuovoArray.push(obj);
+}
+
+console.log(nuovoArray);
